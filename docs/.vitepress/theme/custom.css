@@ -21,6 +21,10 @@
   /* Tipografía */
   --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --vp-font-family-mono: "Fira Code", "JetBrains Mono", Consolas, "Courier New", monospace;
+
+  /* Dimensiones del Layout */
+  --vp-layout-max-width: 1720px;
+  --vp-sidebar-width: 290px;
 }
 
 .dark {
@@ -42,6 +46,78 @@
   --vp-c-text-2: #94a3b8;
   --vp-c-text-3: #64748b;
 }
+
+/* ==========================================================================
+   DISTRIBUCIÓN EXPANSIVA (Separar extremos izquierdo y derecho / eliminar compresión)
+   ========================================================================== */
+
+/* Permitir que el contenido central tenga más amplitud y respire */
+.VPDoc .content-container {
+  max-width: 920px !important;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 900px !important;
+}
+
+/* Columna derecha 'En esta página' */
+.VPDoc .aside {
+  width: 260px !important;
+  padding-left: 28px !important;
+}
+
+/* Pantallas Full HD (>= 1440px) y Ultra Wide */
+@media (min-width: 1440px) {
+  :root {
+    --vp-layout-max-width: 1760px;
+  }
+
+  /* Reduce los márgenes muertos laterales (verde en inspector) */
+  .VPContent.has-sidebar {
+    padding-left: max(var(--vp-sidebar-width) + 32px, calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width))) !important;
+    padding-right: max(48px, calc((100vw - var(--vp-layout-max-width)) / 2)) !important;
+  }
+
+  /* Desplaza la barra lateral más hacia el extremo izquierdo con margen natural */
+  .VPSidebar {
+    padding-left: max(32px, calc((100vw - var(--vp-layout-max-width)) / 2)) !important;
+    width: calc(max(32px, calc((100vw - var(--vp-layout-max-width)) / 2)) + var(--vp-sidebar-width)) !important;
+  }
+
+  /* Distribución fluida entre contenido y aside */
+  .VPDoc.has-sidebar .container {
+    max-width: 1460px !important;
+    justify-content: space-between !important;
+  }
+
+  .VPDoc.has-sidebar .container .content {
+    flex-grow: 1 !important;
+    max-width: none !important;
+  }
+
+  .VPDoc .content-container {
+    max-width: 960px !important;
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 1680px) {
+  :root {
+    --vp-layout-max-width: 1840px;
+  }
+
+  .VPDoc.has-sidebar .container {
+    max-width: 1540px !important;
+  }
+
+  .VPDoc .content-container {
+    max-width: 1020px !important;
+  }
+}
+
+/* ==========================================================================
+   COMPONENTES Y ESTILOS MODERNOS
+   ========================================================================== */
 
 /* Barra de navegación superior */
 .VPNav {
