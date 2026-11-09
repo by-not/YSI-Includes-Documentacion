@@ -1,22 +1,39 @@
 /**
- * Estilo visual SA-MP Moderno & Minimalista
- * Paleta inspirada en SA-MP: Naranja San Andreas (#f97316 / #ea580c),
- * Azul marino profundo (#0b1120 / #0f172a) y Cyan cielo (#38bdf8).
+ * ==============================================================================
+ * SISTEMA DE DISEÑO (DESIGN SYSTEM) - IDENTIDAD GTA SAN ANDREAS / SA-MP
+ * ==============================================================================
+ * Inspirado en los atardeceres dorados de Los Santos, la estética urbana
+ * y la nostalgia de San Andreas. Protagonismo absoluto de tonos naranjas cálidos,
+ * fondos profundos en modo oscuro y tonos arena/crema en modo claro.
  */
 
-:root {
-  /* Marca principal (SA-MP Orange) */
-  --vp-c-brand-1: #ea580c;
-  --vp-c-brand-2: #f97316;
-  --vp-c-brand-3: #fb923c;
-  --vp-c-brand-soft: rgba(249, 115, 22, 0.12);
+/* ==============================================================================
+   1. PALETA DE COLORES Y VARIABLES GLOBALES
+   ============================================================================== */
 
-  /* Fondos modo claro */
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-soft: #f8fafc;
-  --vp-c-bg-alt: #f1f5f9;
-  --vp-c-border: #e2e8f0;
-  --vp-c-divider: #e2e8f0;
+:root {
+  /* MODO CLARO (Light Mode) */
+  --vp-c-bg: #F5F0E8;                  /* Background principal arena suave */
+  --vp-c-bg-soft: #FFFFFF;             /* Background secundario / tarjetas */
+  --vp-c-bg-alt: #ECE4D8;              /* Superficie alterna / inputs */
+  --vp-c-bg-elv: #FFFFFF;              /* Superficies elevadas */
+
+  --vp-c-brand-1: #D96B1B;             /* Color primario naranja cálido */
+  --vp-c-brand-2: #E87924;             /* Color primario hover */
+  --vp-c-brand-3: #C69A68;             /* Color de acento arena tostada */
+  --vp-c-brand-soft: rgba(217, 107, 27, 0.12);
+
+  --vp-c-text-1: #29231D;              /* Texto principal */
+  --vp-c-text-2: #75685C;              /* Texto secundario cálido */
+  --vp-c-text-3: #9C8E80;              /* Texto terciario / metadatos */
+
+  --vp-c-border: #E5DACE;              /* Bordes y separadores */
+  --vp-c-divider: #E5DACE;
+  --vp-c-gutter: #E5DACE;
+
+  --vp-code-block-bg: #EFE8DD;         /* Fondo de bloques de código */
+  --vp-code-bg: rgba(217, 107, 27, 0.08);
+  --vp-code-color: #29231D;
 
   /* Tipografía */
   --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -28,30 +45,34 @@
 }
 
 .dark {
-  /* Marca modo oscuro: naranja enérgico */
-  --vp-c-brand-1: #f97316;
-  --vp-c-brand-2: #fb923c;
-  --vp-c-brand-3: #ea580c;
-  --vp-c-brand-soft: rgba(249, 115, 22, 0.16);
+  /* MODO OSCURO (Dark Mode) */
+  --vp-c-bg: #171717;                  /* Background principal oscuro */
+  --vp-c-bg-soft: #26221E;             /* Background secundario / superficies */
+  --vp-c-bg-alt: #1F1B18;              /* Superficie alterna */
+  --vp-c-bg-elv: #26221E;              /* Superficies elevadas */
 
-  /* Fondos modo oscuro inspirados en el cliente SA-MP */
-  --vp-c-bg: #0b1120;
-  --vp-c-bg-soft: #111b2e;
-  --vp-c-bg-alt: #162238;
-  --vp-c-border: rgba(255, 255, 255, 0.08);
-  --vp-c-divider: rgba(255, 255, 255, 0.08);
+  --vp-c-brand-1: #F28C28;             /* Color primario naranja San Andreas */
+  --vp-c-brand-2: #E87924;             /* Color primario hover */
+  --vp-c-brand-3: #D6A66A;             /* Color de acento dorado atardecer */
+  --vp-c-brand-soft: rgba(242, 140, 40, 0.16);
 
-  /* Texto */
-  --vp-c-text-1: #f1f5f9;
-  --vp-c-text-2: #94a3b8;
-  --vp-c-text-3: #64748b;
+  --vp-c-text-1: #F5F0E8;              /* Texto principal crema suave */
+  --vp-c-text-2: #B8ADA0;              /* Texto secundario */
+  --vp-c-text-3: #8C8072;              /* Texto terciario */
+
+  --vp-c-border: #39332D;              /* Bordes y separadores */
+  --vp-c-divider: #39332D;
+  --vp-c-gutter: #39332D;
+
+  --vp-code-block-bg: #1C1916;         /* Fondo de bloques de código */
+  --vp-code-bg: rgba(242, 140, 40, 0.12);
+  --vp-code-color: #F5F0E8;
 }
 
-/* ==========================================================================
-   DISTRIBUCIÓN EXPANSIVA (Separar extremos izquierdo y derecho / eliminar compresión)
-   ========================================================================== */
+/* ==============================================================================
+   2. DISTRIBUCIÓN EXPANSIVA DE PANTALLA (1080p, 2K, 4K)
+   ============================================================================= */
 
-/* Permitir que el contenido central tenga más amplitud y respire */
 .VPDoc .content-container {
   max-width: 920px !important;
 }
@@ -60,31 +81,26 @@
   max-width: 900px !important;
 }
 
-/* Columna derecha 'En esta página' */
 .VPDoc .aside {
   width: 260px !important;
   padding-left: 28px !important;
 }
 
-/* Pantallas Full HD (>= 1440px) y Ultra Wide */
 @media (min-width: 1440px) {
   :root {
     --vp-layout-max-width: 1760px;
   }
 
-  /* Reduce los márgenes muertos laterales (verde en inspector) */
   .VPContent.has-sidebar {
     padding-left: max(var(--vp-sidebar-width) + 32px, calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width))) !important;
     padding-right: max(48px, calc((100vw - var(--vp-layout-max-width)) / 2)) !important;
   }
 
-  /* Desplaza la barra lateral más hacia el extremo izquierdo con margen natural */
   .VPSidebar {
     padding-left: max(32px, calc((100vw - var(--vp-layout-max-width)) / 2)) !important;
     width: calc(max(32px, calc((100vw - var(--vp-layout-max-width)) / 2)) + var(--vp-sidebar-width)) !important;
   }
 
-  /* Distribución fluida entre contenido y aside */
   .VPDoc.has-sidebar .container {
     max-width: 1460px !important;
     justify-content: space-between !important;
@@ -115,17 +131,134 @@
   }
 }
 
-/* ==========================================================================
-   COMPONENTES Y ESTILOS MODERNOS
-   ========================================================================== */
+/* ==============================================================================
+   3. BARRA DE NAVEGACIÓN Y CABECERA (NAVBAR)
+   ============================================================================== */
 
-/* Barra de navegación superior */
 .VPNav {
-  backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(14px) !important;
   border-bottom: 1px solid var(--vp-c-divider) !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Tarjetas y contenedores con borde suave y transición */
+:root:not(.dark) .VPNav {
+  background-color: rgba(245, 240, 232, 0.88) !important;
+}
+
+.dark .VPNav {
+  background-color: rgba(23, 23, 23, 0.88) !important;
+}
+
+.VPNavBarTitle .title {
+  color: var(--vp-c-text-1) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarMenuLink {
+  color: var(--vp-c-text-2) !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* ==============================================================================
+   4. BARRA LATERAL (SIDEBAR)
+   ============================================================================== */
+
+.VPSidebar {
+  background-color: var(--vp-c-bg) !important;
+  border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPSidebarItem .text {
+  color: var(--vp-c-text-2);
+  transition: color 0.15s ease;
+}
+
+.VPSidebarItem:hover .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPSidebarItem.is-active > .item > .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600 !important;
+}
+
+.VPSidebarItem.is-active > .item > .indicator {
+  background-color: var(--vp-c-brand-1) !important;
+}
+
+/* Títulos de sección de la barra lateral */
+.VPSidebarGroup .title-text {
+  color: var(--vp-c-text-1) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* ==============================================================================
+   5. PORTADA / HOME HERO & FEATURES
+   ============================================================================== */
+
+/* Título degradado atardecer Los Santos */
+.VPHero .name {
+  background: linear-gradient(135deg, var(--vp-c-brand-1) 0%, var(--vp-c-brand-3) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+}
+
+.VPHero .text {
+  color: var(--vp-c-text-1) !important;
+  font-weight: 700 !important;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2) !important;
+}
+
+/* Botón principal brand */
+.VPButton.brand {
+  background-color: var(--vp-c-brand-1) !important;
+  border-color: var(--vp-c-brand-1) !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 14px rgba(242, 140, 40, 0.24) !important;
+  transition: all 0.2s ease !important;
+}
+
+.VPButton.brand:hover {
+  background-color: var(--vp-c-brand-2) !important;
+  border-color: var(--vp-c-brand-2) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(232, 121, 36, 0.35) !important;
+}
+
+/* Botón alternativo */
+.VPButton.alt {
+  background-color: transparent !important;
+  border: 1px solid var(--vp-c-border) !important;
+  color: var(--vp-c-text-1) !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-c-brand-soft) !important;
+}
+
+/* Tarjetas de características (Features) */
 .VPFeature {
   border: 1px solid var(--vp-c-border) !important;
   background-color: var(--vp-c-bg-soft) !important;
@@ -135,55 +268,106 @@
 
 .VPFeature:hover {
   border-color: var(--vp-c-brand-1) !important;
-  box-shadow: 0 4px 20px -2px rgba(249, 115, 22, 0.15) !important;
+  box-shadow: 0 6px 24px -4px rgba(242, 140, 40, 0.18) !important;
   transform: translateY(-2px);
 }
 
-/* Botones principales de la Home */
-.VPButton.brand {
-  background-color: #ea580c !important;
-  border-color: #ea580c !important;
-  color: #ffffff !important;
+.VPFeature .title {
+  color: var(--vp-c-text-1) !important;
   font-weight: 600 !important;
-  letter-spacing: 0.02em;
-  border-radius: 6px !important;
-  transition: background-color 0.2s ease, transform 0.2s ease !important;
 }
 
-.VPButton.brand:hover {
-  background-color: #f97316 !important;
-  border-color: #f97316 !important;
-  transform: translateY(-1px);
+.VPFeature .details {
+  color: var(--vp-c-text-2) !important;
+  line-height: 1.6 !important;
 }
 
-.VPButton.alt {
-  background-color: transparent !important;
-  border: 1px solid var(--vp-c-border) !important;
-  border-radius: 6px !important;
-  font-weight: 500 !important;
+/* ==============================================================================
+   6. TIPOGRAFÍA Y ENLACES
+   ============================================================================== */
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  color: var(--vp-c-text-1);
+  letter-spacing: -0.015em;
+  font-weight: 700;
 }
 
-.VPButton.alt:hover {
-  border-color: var(--vp-c-brand-1) !important;
+.vp-doc h2 {
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 0.4rem;
+  margin-top: 2.2rem;
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: var(--vp-c-text-1);
+  line-height: 1.75;
+}
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+  border-bottom-color: var(--vp-c-brand-2);
+}
+
+/* ==============================================================================
+   7. BLOQUES DE CÓDIGO Y ELEMENTOS INLINE
+   ============================================================================== */
+
+/* Código en línea `código` */
+.vp-doc :not(pre) > code {
   color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-code-bg) !important;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 4px;
+  padding: 0.2em 0.45em;
+  font-size: 0.88em;
+  font-weight: 500;
 }
 
-/* Tablas estilizadas limpias y modernas */
+/* Bloques de código preformateado */
+div[class*='language-'] {
+  background-color: var(--vp-code-block-bg) !important;
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: 8px !important;
+  margin: 1.35rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+div[class*='language-'] pre {
+  padding: 1.1rem 1.25rem !important;
+}
+
+/* ==============================================================================
+   8. TABLAS TÉCNICAS
+   ============================================================================== */
+
 table {
   display: table;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   margin: 1.5rem 0;
-  border: 1px solid var(--vp-c-divider);
+  border: 1px solid var(--vp-c-border);
   border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
   overflow: hidden;
 }
 
 th, td {
-  padding: 0.8rem 1.1rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-  border-right: 1px solid var(--vp-c-divider);
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--vp-c-border);
+  border-right: 1px solid var(--vp-c-border);
   font-size: 0.92rem;
 }
 
@@ -196,52 +380,106 @@ tr:last-child td {
 }
 
 th {
-  background-color: var(--vp-c-bg-soft);
+  background-color: var(--vp-c-bg-alt);
   color: var(--vp-c-text-1);
-  font-weight: 600;
+  font-weight: 700;
   text-align: left;
 }
 
 tr:hover td {
-  background-color: rgba(249, 115, 22, 0.04);
+  background-color: var(--vp-c-brand-soft);
 }
 
-/* Bloques de código Pawn */
-div[class*='language-'] {
-  border: 1px solid var(--vp-c-border) !important;
-  border-radius: 8px !important;
-  margin: 1.25rem 0 !important;
-}
+/* ==============================================================================
+   9. ALERTAS Y CALLOUTS (CUSTOM BLOCKS)
+   ============================================================================== */
 
-/* Callouts / Alertas minimalistas */
 .custom-block {
   border-radius: 8px !important;
-  margin: 1.25rem 0 !important;
+  margin: 1.35rem 0 !important;
   border-width: 1px !important;
   border-style: solid !important;
+  padding: 1rem 1.25rem !important;
 }
 
+/* Tip / Consejo: Tono arena dorada */
 .custom-block.tip {
-  border-color: rgba(56, 189, 248, 0.3) !important;
-  background-color: rgba(56, 189, 248, 0.05) !important;
+  border-color: var(--vp-c-brand-3) !important;
+  background-color: rgba(214, 166, 106, 0.09) !important;
 }
 
+.custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-3) !important;
+  font-weight: 700;
+}
+
+/* Info: Naranja primario */
 .custom-block.info {
-  border-color: rgba(249, 115, 22, 0.3) !important;
-  background-color: rgba(249, 115, 22, 0.05) !important;
+  border-color: var(--vp-c-brand-1) !important;
+  background-color: var(--vp-c-brand-soft) !important;
 }
 
+.custom-block.info .custom-block-title {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 700;
+}
+
+/* Warning: Naranja intenso */
 .custom-block.warning {
-  border-color: rgba(234, 179, 8, 0.3) !important;
-  background-color: rgba(234, 179, 8, 0.05) !important;
+  border-color: var(--vp-c-brand-2) !important;
+  background-color: rgba(232, 121, 36, 0.12) !important;
 }
 
+.custom-block.warning .custom-block-title {
+  color: var(--vp-c-brand-2) !important;
+  font-weight: 700;
+}
+
+/* Danger: Terracota tostado / quemado */
 .custom-block.danger {
-  border-color: rgba(239, 68, 68, 0.3) !important;
-  background-color: rgba(239, 68, 68, 0.05) !important;
+  border-color: #C2410C !important;
+  background-color: rgba(194, 65, 12, 0.1) !important;
 }
 
-/* Scrollbar estilizado */
+.custom-block.danger .custom-block-title {
+  color: #EA580C !important;
+  font-weight: 700;
+}
+
+/* ==============================================================================
+   10. COLUMNA DERECHA 'EN ESTA PÁGINA' (OUTLINE)
+   ============================================================================== */
+
+.VPDocAsideOutline .outline-title {
+  color: var(--vp-c-text-1) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.VPDocAsideOutline .outline-link {
+  color: var(--vp-c-text-2) !important;
+  transition: color 0.15s ease !important;
+}
+
+.VPDocAsideOutline .outline-link:hover {
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600 !important;
+}
+
+.VPDocAsideOutline .outline-marker {
+  background-color: var(--vp-c-brand-1) !important;
+}
+
+/* ==============================================================================
+   11. SCROLLBAR ESTILIZADO
+   ============================================================================== */
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -252,7 +490,7 @@ div[class*='language-'] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.25);
+  background: var(--vp-c-border);
   border-radius: 4px;
 }
 
