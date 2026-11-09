@@ -1,0 +1,14 @@
+# Dependencias
+node_modules/
+
+# Cache y builds de VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Carpeta de referencia interna del código fuente de YSI
+_source/
+
+# Logs del sistema y SO
+*.log
+.DS_Store
+Thumbs.db

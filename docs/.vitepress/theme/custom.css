@@ -1,0 +1,185 @@
+/**
+ * Estilo visual SA-MP Moderno & Minimalista
+ * Paleta inspirada en SA-MP: Naranja San Andreas (#f97316 / #ea580c),
+ * Azul marino profundo (#0b1120 / #0f172a) y Cyan cielo (#38bdf8).
+ */
+
+:root {
+  /* Marca principal (SA-MP Orange) */
+  --vp-c-brand-1: #ea580c;
+  --vp-c-brand-2: #f97316;
+  --vp-c-brand-3: #fb923c;
+  --vp-c-brand-soft: rgba(249, 115, 22, 0.12);
+
+  /* Fondos modo claro */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f8fafc;
+  --vp-c-bg-alt: #f1f5f9;
+  --vp-c-border: #e2e8f0;
+  --vp-c-divider: #e2e8f0;
+
+  /* Tipografía */
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: "Fira Code", "JetBrains Mono", Consolas, "Courier New", monospace;
+}
+
+.dark {
+  /* Marca modo oscuro: naranja enérgico */
+  --vp-c-brand-1: #f97316;
+  --vp-c-brand-2: #fb923c;
+  --vp-c-brand-3: #ea580c;
+  --vp-c-brand-soft: rgba(249, 115, 22, 0.16);
+
+  /* Fondos modo oscuro inspirados en el cliente SA-MP */
+  --vp-c-bg: #0b1120;
+  --vp-c-bg-soft: #111b2e;
+  --vp-c-bg-alt: #162238;
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.08);
+
+  /* Texto */
+  --vp-c-text-1: #f1f5f9;
+  --vp-c-text-2: #94a3b8;
+  --vp-c-text-3: #64748b;
+}
+
+/* Barra de navegación superior */
+.VPNav {
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Tarjetas y contenedores con borde suave y transición */
+.VPFeature {
+  border: 1px solid var(--vp-c-border) !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border-radius: 10px !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 4px 20px -2px rgba(249, 115, 22, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Botones principales de la Home */
+.VPButton.brand {
+  background-color: #ea580c !important;
+  border-color: #ea580c !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+  border-radius: 6px !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.VPButton.brand:hover {
+  background-color: #f97316 !important;
+  border-color: #f97316 !important;
+  transform: translateY(-1px);
+}
+
+.VPButton.alt {
+  background-color: transparent !important;
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+}
+
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* Tablas estilizadas limpias y modernas */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.8rem 1.1rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  border-right: 1px solid var(--vp-c-divider);
+  font-size: 0.92rem;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  text-align: left;
+}
+
+tr:hover td {
+  background-color: rgba(249, 115, 22, 0.04);
+}
+
+/* Bloques de código Pawn */
+div[class*='language-'] {
+  border: 1px solid var(--vp-c-border) !important;
+  border-radius: 8px !important;
+  margin: 1.25rem 0 !important;
+}
+
+/* Callouts / Alertas minimalistas */
+.custom-block {
+  border-radius: 8px !important;
+  margin: 1.25rem 0 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+.custom-block.tip {
+  border-color: rgba(56, 189, 248, 0.3) !important;
+  background-color: rgba(56, 189, 248, 0.05) !important;
+}
+
+.custom-block.info {
+  border-color: rgba(249, 115, 22, 0.3) !important;
+  background-color: rgba(249, 115, 22, 0.05) !important;
+}
+
+.custom-block.warning {
+  border-color: rgba(234, 179, 8, 0.3) !important;
+  background-color: rgba(234, 179, 8, 0.05) !important;
+}
+
+.custom-block.danger {
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Scrollbar estilizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
