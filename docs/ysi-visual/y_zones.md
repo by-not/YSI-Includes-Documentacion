@@ -13,8 +13,6 @@ Este documento cubre los dos módulos de YSI orientados a la gestión geográfic
 #include <YSI_Visual\y_zonepulse>
 ```
 
----
-
 ## Tabla de Contenido
 
 - [Parte 1: y_zonenames (Rótulos de Barrios de GTA)](#parte-1-y_zonenames-rotulos-de-barrios-de-gta)

@@ -13,8 +13,6 @@ Este documento detalla dos módulos visuales y de mecánicas de juego incluidos 
 #include <YSI_Visual\y_races>
 ```
 
----
-
 ## Tabla de Contenido
 
 - [Parte 1: y_properties (Economía y Bienes Raíces)](#parte-1-y_properties-economia-y-bienes-raices)

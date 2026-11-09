@@ -4,8 +4,6 @@ En arquitecturas de software modernas para SA-MP y open.mp, dividir un gamemode 
 
 Durante años, la comunidad recurrió a los sistemas **ALS (Advanced Library Shield)**, que requerían decenas de directivas `#define`, `#undef` y funciones puente por cada callback o nativa. `y_hooks` revoluciona este paradigma permitiendo que cualquier cantidad de scripts e includes intercepten callbacks y funciones de manera transparente, segura, con soporte para prioridades y sin colisiones.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar `y_hooks`, debes incluirlo en cada archivo o módulo que defina un hook:
@@ -18,8 +16,6 @@ Para utilizar `y_hooks`, debes incluirlo en cada archivo o módulo que defina un
 > [!TIP]
 > Puedes incluir `<YSI_Coding\y_hooks>` en la cabecera de múltiples archivos `.pwn` o `.inc`. El sistema gestionará automáticamente los nombres únicos internos para que no colisionen.
 
----
-
 ## Resumen de Funciones y Macros
 
 | Elemento | Tipo | Descripción |
@@ -31,8 +27,6 @@ Para utilizar `y_hooks`, debes incluirlo en cada archivo o módulo que defina un
 | [`~1` y `~0` (Break Hook)](#retornos-en-cadenas-de-hooks) | Operador de retorno | Corta inmediatamente la ejecución de los hooks restantes y devuelve 1 o 0 al servidor. |
 | [`DEFINE_HOOK_RETURN__`](#define_hook_return__) | Macro global | Define el valor por defecto devuelto por un callback si ningún hook lo altera. |
 | [`DEFINE_HOOK_REPLACEMENT__`](#define_hook_replacement__) | Macro global | Registra abreviaturas automáticas para evitar que los nombres de hooks superen el límite del compilador. |
-
----
 
 ## Tipos de Hooks
 
@@ -174,8 +168,6 @@ return continue(arg1, arg2, ...);
   - Lista de argumentos que se transmitirán a la siguiente función. Permite alterar los valores en tránsito.
 - **Retorno:** El valor de retorno del siguiente hook o de la función nativa subyacente.
 
----
-
 ## Retornos en Cadenas de Hooks
 
 En el sistema tradicional de callbacks de SA-MP, el valor devuelto define el comportamiento del servidor (por ejemplo, en `OnPlayerCommandText`, retornar `1` indica que el comando fue procesado, mientras que retornar `0` provoca el mensaje *"SERVER: Unknown Command"*).
@@ -202,8 +194,6 @@ hook OnPlayerText(playerid, text[])
     return 1; // Permite que otros hooks procesen el texto
 }
 ```
-
----
 
 ## Prioridades y Orden de Ejecución
 
@@ -252,8 +242,6 @@ hook OnPlayerConnect(playerid) <servidor_mantenimiento : inactivo>
 }
 ```
 
----
-
 ## Macros de Configuración Global
 
 ### DEFINE_HOOK_RETURN__
@@ -294,8 +282,6 @@ hook OnPlayerInventoryOpened(playerid)
 }
 ```
 
----
-
 ## Comparativa: ALS Tradicional vs y_hooks
 
 | Característica | ALS Tradicional (v1 a v7) | y_hooks (YSI) |
@@ -306,8 +292,6 @@ hook OnPlayerInventoryOpened(playerid)
 | **Interrupción de cadena** | Compleja y manual. | Directa mediante `return ~1;` o `return ~0;`. |
 | **Rendimiento** | Añade saltos de llamada estándar entre funciones intermedias. | Genera tablas de salto optimizadas en AMX más rápidas que funciones normales. |
 | **Detección de errores** | Los errores de sintaxis en ALS provocan mensajes crípticos del compilador. | Mensajes descriptivos y verificación estricta de parámetros. |
-
----
 
 ## Ejemplo Completo para SA-MP / open.mp
 
@@ -386,8 +370,6 @@ main()
     print("Servidor iniciado con arquitectura modular y_hooks.");
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

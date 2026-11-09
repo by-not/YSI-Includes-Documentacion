@@ -28,8 +28,6 @@ Para utilizar `y_groups`, se debe incluir después del core o de las dependencia
 > [!NOTE]
 > Si utilizas `y_commands` junto con `y_groups`, asegúrate de incluir `y_groups` antes o permitir que `y_commands` detecte automáticamente el sistema de grupos para compilar las funciones de enlace `Group_SetCommand`.
 
----
-
 ## Tabla de Contenido
 
 - [Conceptos Fundamentales](#conceptos-fundamentales)

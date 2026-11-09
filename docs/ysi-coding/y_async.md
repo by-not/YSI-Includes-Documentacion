@@ -6,8 +6,6 @@ En el Pawn tradicional, esto obligaba a fragmentar el código en una cadena de m
 
 El módulo `y_async` introduce en Pawn el patrón moderno **`async` / `await`** y corrutinas cooperativas. Permite redactar flujos de trabajo asíncronos en un formato secuencial y legible, pausando y reanudando la ejecución de la función sin bloquear jamás el tick del servidor.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar corrutinas y flujos asíncronos:
@@ -16,8 +14,6 @@ Para utilizar corrutinas y flujos asíncronos:
 #include <open.mp> // o <a_samp>
 #include <YSI_Coding\y_async>
 ```
-
----
 
 ## Resumen de Funciones y Palabras Clave
 
@@ -28,8 +24,6 @@ Para utilizar corrutinas y flujos asíncronos:
 | [`await ... -> (vars)`](#desempaquetado-con) | Sintaxis de extracción | Desempaqueta y captura los parámetros devueltos por el callback en variables locales. |
 | [`using async`](#using-async) | Modificador de llamada | Convierte un callback convencional en una promesa operable con `await`. |
 | [`ASYNC_DETACH`](#async_detach) | Macro de contexto | Desvincula una corrutina en segundo plano y devuelve inmediatamente un valor al invocador. |
-
----
 
 ## Comparativa: Callback Hell vs Flujo Asíncrono
 
@@ -117,8 +111,6 @@ async AutenticarJugador(playerid)
 }
 ```
 
----
-
 ## Sintaxis y Componentes
 
 ### async
@@ -198,8 +190,6 @@ if (response)
 await FuncionConCallback(param1, param2, using async) -> (resultado);
 ```
 
----
-
 ## Ejemplo Completo para SA-MP / open.mp
 
 Demostración de un sistema de subasta donde el servidor ejecuta un temporizador de cuenta regresiva no bloqueante mediante corrutinas:
@@ -249,8 +239,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
     return 0;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

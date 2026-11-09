@@ -34,8 +34,6 @@ Cada comparación divide el espacio de búsqueda restante a la mitad, reduciendo
 #include <YSI_Data\y_bintree>
 ```
 
----
-
 ## Tabla de Contenidos
 
 1. [Estructuras y Declaración](#estructuras-y-declaracion)

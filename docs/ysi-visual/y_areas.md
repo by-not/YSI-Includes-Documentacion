@@ -2,15 +2,11 @@
 
 `y_areas` es un sistema de detección espacial de alto rendimiento para SA-MP y open.mp. Permite definir volúmenes geométricos tridimensionales (esferas, cubos, cajas 2D, cilindros, ovoides y polígonos irregulares) y detectar con precisión milimétrica cuándo un jugador entra o sale de ellos, todo ello optimizado mediante particionamiento del mapa en cuadrículas (*spatial grid partitioning*).
 
----
-
 ## Módulo Requerido
 
 ```pawn
 #include <YSI_Visual\y_areas>
 ```
-
----
 
 ## Tabla de Contenido
 

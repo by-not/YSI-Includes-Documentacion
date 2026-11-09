@@ -32,8 +32,6 @@ La dupla `y_debug` + `y_testing` soluciona esto con:
 #include <YSI_Core\y_testing>
 ```
 
----
-
 ## Tabla de Contenido
 
 1. [Sistema de Depuración: y_debug](#sistema-de-depuracion-y_debug)

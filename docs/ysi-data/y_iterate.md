@@ -54,8 +54,6 @@ Para utilizar este módulo en tu gamemode o filterscript:
 > [!NOTE]
 > También puedes incluir `#include <YSI_Data\y_foreach>`. Ambos archivos son equivalentes en las versiones modernas de YSI v5.x.
 
----
-
 ## Tabla de Contenidos
 
 1. [Sintaxis del Bucle `foreach`](#sintaxis-del-bucle-foreach)

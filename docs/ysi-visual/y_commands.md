@@ -2,15 +2,11 @@
 
 `y_commands` es el procesador de comandos más veloz, modular, robusto y personalizable disponible para SA-MP y open.mp. Reemplaza por completo el lento procesamiento nativo por comparación lineal de cadenas (`strcmp` dentro de `OnPlayerCommandText`) mediante un sistema de **tablas hash indexadas en memoria AMX O(1)** con soporte para permisos por jugador y por grupos, alias dinámicos, comandos dependientes del contexto, comandos inline y prefijos alternativos.
 
----
-
 ## Módulo Requerido
 
 ```pawn
 #include <YSI_Visual\y_commands>
 ```
-
----
 
 ## Tabla de Contenido
 

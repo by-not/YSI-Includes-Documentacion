@@ -60,8 +60,6 @@ Para incluir `y_android`:
 > #include <YSI_Players\y_android>
 > ```
 
----
-
 ## Tabla de Contenido
 
 - [Funciones del Módulo](#funciones-del-modulo)

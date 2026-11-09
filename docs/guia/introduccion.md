@@ -4,8 +4,6 @@ Bienvenido a la documentación técnica de **YSI (Y_Less's Standard Includes)**,
 
 Desarrollado originalmente por **Alex "Y_Less" Cole** y mantenido de forma activa por el equipo de **pawn-lang**, YSI expande drásticamente las capacidades del compilador Pawn estándar, dotando a los desarrolladores de herramientas de nivel profesional: estructuras de datos avanzadas, funciones en línea (*closures*), hooking modular sin conflictos de callbacks, sistemas de comandos de ultrabaja latencia, temporizadores precisos y abstracciones de interfaz gráfica y lógica de servidor.
 
----
-
 ## Tabla de Contenido
 
 - [¿Qué es YSI?](#que-es-ysi)

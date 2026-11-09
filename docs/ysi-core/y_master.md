@@ -23,8 +23,6 @@ En la arquitectura clásica de SA-MP, el Gamemode y cada Filterscript operan en 
 #include <YSI_Core\y_master>
 ```
 
----
-
 ## Tabla de Contenido
 
 1. [Conceptos Clave: foreign y global](#conceptos-clave-foreign-y-global)

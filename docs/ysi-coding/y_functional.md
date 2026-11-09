@@ -8,8 +8,6 @@ El módulo `y_functional` de la suite YSI introduce los conceptos esenciales de 
 * **Abstracción matemática y lógica:** Utilidades como `Sum`, `Product`, `Any` y `All`.
 * **Paso flexible de funciones:** Soporte indistinto para expresiones lambda, funciones `stock`, funciones públicas (`public`) y funciones `inline`.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar herramientas funcionales:
@@ -18,8 +16,6 @@ Para utilizar herramientas funcionales:
 #include <open.mp> // o <a_samp>
 #include <YSI_Coding\y_functional>
 ```
-
----
 
 ## Resumen de Funciones y Operaciones
 
@@ -35,8 +31,6 @@ Para utilizar herramientas funcionales:
 | [`ZipWith`](#zipwith) | Función funcional | Combina dos arrays de entrada aplicando una función binaria `{ _0 + _1 }` en cada par. |
 | [`Sum` y `Product`](#utilidades-matematicas-sum-product-any-all) | Funciones de agregación | Suman o multiplican todos los elementos de un array en una sola llamada. |
 | [`Any` y `All`](#utilidades-matematicas-sum-product-any-all) | Funciones lógicas | Evalúan si alguno o todos los elementos de un array son evaluados como verdaderos. |
-
----
 
 ## Sintaxis de Lambdas en Pawn
 
@@ -54,8 +48,6 @@ A diferencia de otros lenguajes donde se declaran nombres de parámetros explíc
 { _0 + _1 }          // Suma dos argumentos (usado en Fold y ZipWith)
 { printf("%d", _0) } // Ejecuta una acción de impresión
 ```
-
----
 
 ## Compatibilidad de Paso de Funciones
 
@@ -77,8 +69,6 @@ Map(using public Multiplicar, origen, destino);
 inline Multiplicador(valor) return valor * factorGlobal;
 Map(using inline Multiplicador, origen, destino);
 ```
-
----
 
 ## Funciones Principales de Transformación
 
@@ -243,8 +233,6 @@ new diferenciasX[3];
 ZipWith({ _1 - _0 }, coordenadasX_Origen, coordenadasX_Destino, diferenciasX);
 ```
 
----
-
 ## Utilidades Matemáticas: Sum, Product, Any, All
 
 `y_functional` incluye abreviaciones integradas para operaciones recurrentes sobre arrays enteros:
@@ -273,8 +261,6 @@ if (All(flags))
     // Todos los elementos son verdaderos
 }
 ```
-
----
 
 ## Ejemplo Completo para SA-MP / open.mp
 
@@ -318,8 +304,6 @@ CMD:sanitizar(playerid, params[])
     return 1;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

@@ -24,8 +24,6 @@ Para incluir `y_amx`:
 #include <YSI_Storage\y_amx>
 ```
 
----
-
 ## Tabla de Contenido
 
 - [Arquitectura de la Máquina Virtual AMX](#arquitectura-de-la-maquina-virtual-amx)

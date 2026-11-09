@@ -4,15 +4,11 @@ En el desarrollo tradicional de SA-MP, el sistema de diálogos nativo (`ShowPlay
 
 **`y_dialog`** revoluciona este paradigma gestionando automáticamente los identificadores en segundo plano y permitiendo vincular cada diálogo a **funciones en línea (*closures* con `y_inline`)** o callbacks independientes.
 
----
-
 ## Módulo Requerido
 
 ```pawn
 #include <YSI_Visual\y_dialog>
 ```
-
----
 
 ## Tabla de Contenido
 

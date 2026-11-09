@@ -42,8 +42,6 @@ Para utilizar las definiciones de soporte ALS de YSI:
 #include <YSI_Core\y_als>
 ```
 
----
-
 ## Tabla de Contenido
 
 1. [Anatomía del Hooking de Callbacks con ALS](#anatomia-del-hooking-de-callbacks-con-als)

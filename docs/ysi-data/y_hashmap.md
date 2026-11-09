@@ -57,8 +57,6 @@ graph TD
 #include <YSI_Data\y_hashmap>
 ```
 
----
-
 ## Tabla de Contenidos
 
 1. [Estructura y Declaración](#estructura-y-declaracion)

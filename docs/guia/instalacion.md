@@ -2,8 +2,6 @@
 
 En esta guía aprenderás paso a paso cómo instalar y configurar la suite **YSI v5** tanto en servidores clásicos de **SA-MP (0.3.7 / 0.3.DL)** como en la plataforma moderna **open.mp**, ya sea mediante el gestor de paquetes **sampctl** o a través de **descarga manual**.
 
----
-
 ## Tabla de Contenido
 
 - [Requisitos Previos y Compilador](#requisitos-previos-y-compilador)

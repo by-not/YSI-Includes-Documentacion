@@ -25,8 +25,6 @@ Para incluir `y_ini` en tu proyecto:
 #include <YSI_Storage\y_ini>
 ```
 
----
-
 ## Tabla de Contenido
 
 - [Arquitectura y Funcionamiento Interno](#arquitectura-y-funcionamiento-interno)

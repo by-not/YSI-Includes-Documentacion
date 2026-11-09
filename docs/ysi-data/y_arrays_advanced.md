@@ -17,8 +17,6 @@ Puedes incluir cada módulo individualmente según las necesidades de tu proyect
 #include <YSI_Data\y_circular>
 ```
 
----
-
 ## Tabla de Contenidos
 
 1. [Parte 1: y_sparsearray (Arrays Dispersos)](#parte-1-y_sparsearray-arrays-dispersos)

@@ -37,8 +37,6 @@ graph TD
 #include <YSI_Data\y_playerset>
 ```
 
----
-
 ## Tabla de Contenidos
 
 1. [Módulo 1: `y_playerarray`](#modulo-1-y_playerarray)

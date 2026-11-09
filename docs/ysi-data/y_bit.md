@@ -43,8 +43,6 @@ graph TD
 #include <YSI_Data\y_bit>
 ```
 
----
-
 ## Tabla de Contenidos
 
 1. [Declaración de BitArrays](#declaracion-de-bitarrays)

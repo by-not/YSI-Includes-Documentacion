@@ -296,9 +296,21 @@
 }
 
 .vp-doc h2 {
-  border-bottom: 1px solid var(--vp-c-divider);
-  padding-bottom: 0.4rem;
-  margin-top: 2.2rem;
+  border-bottom: none !important;
+  margin-top: 2.4rem;
+  padding-bottom: 0;
+}
+
+/* Regla horizontal (HR): línea simple, plana y limpia (sin doble borde 3D) */
+hr,
+.vp-doc hr {
+  border: 0 !important;
+  border-top: 1px solid var(--vp-c-divider) !important;
+  border-bottom: 0 !important;
+  height: 0 !important;
+  margin: 2rem 0 !important;
+  background: none !important;
+  box-sizing: content-box !important;
 }
 
 .vp-doc p,

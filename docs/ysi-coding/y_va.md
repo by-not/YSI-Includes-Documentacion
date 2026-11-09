@@ -9,8 +9,6 @@ Este patrón llena el gamemode de miles de líneas de código redundante, desper
 
 El módulo `y_va` (Variable Arguments) de YSI revoluciona este aspecto: permite usar cadenas con formato **directamente** en las funciones de SA-MP y proporciona el operador `___(n)` para reenviar listas de argumentos variables entre funciones de forma instantánea.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar `y_va`:
@@ -31,8 +29,6 @@ Si prefieres conservar las firmas originales sin alteraciones y utilizar exclusi
 #include <YSI_Coding\y_va>
 ```
 
----
-
 ## Resumen de Funciones y Operadores
 
 | Elemento | Tipo | Descripción |
@@ -46,8 +42,6 @@ Si prefieres conservar las firmas originales sin alteraciones y utilizar exclusi
 | [`va_CallLocalFunction`](#va_calllocalfunction) | Función stock | Invoca una función pública local con argumentos variables tipados. |
 | [`va_CallRemoteFunction`](#va_callremotefunction) | Función stock | Invoca una función pública remota (gamemode/filterscripts) con argumentos variables. |
 | [`___(n)` (Operador Varargs)](#el-operador-de-reenvio-___n) | Operador preprocesador | Reenvía la lista de argumentos variables recibida a otra función varargs. |
-
----
 
 ## Comparativa: Código Tradicional vs y_va
 
@@ -95,8 +89,6 @@ CMD:stats(playerid, params[])
     return 1;
 }
 ```
-
----
 
 ## Documentación de Funciones
 
@@ -236,8 +228,6 @@ va_CallRemoteFunction(const function[], const specifiers[], GLOBAL_TAG_TYPES:...
 ```
 - **Retorno:** El valor entero devuelto por la función pública llamada.
 
----
-
 ## El Operador de Reenvío: `___(n)`
 
 Uno de los problemas más frustrantes de Pawn es la imposibilidad de crear funciones intermedias que reciban parámetros variables (`...`) y los pasen a otra función. Por ejemplo, crear tu propia función de log o mensajes de chat con prefijo de rango.
@@ -276,8 +266,6 @@ main()
 }
 ```
 
----
-
 ## Etiquetas Globales: GLOBAL_TAG_TYPES y CUSTOM_TAG_TYPES
 
 En Pawn, si declaras `MiFuncion(const formato[], ...)` el compilador asumirá que los argumentos adicionales son enteros sin etiqueta (`_:`). Si intentas pasar un `Float:`, un `Timer:`, un `Text3D:` o un tag propio, el compilador emitirá un molesto warning:
@@ -294,8 +282,6 @@ Si en tu gamemode utilizas tags específicos (como `DB:`, `MySQL:`, `BitArray:`)
 #include <open.mp>
 #include <YSI_Coding\y_va>
 ```
-
----
 
 ## Lista de Funciones Nativas Sobrecargadas
 
@@ -318,8 +304,6 @@ Si **no** defines `YSI_NO_AUTO_VA`, las siguientes funciones nativas de SA-MP ac
 * `PlayerTextDrawSetString(playerid, PlayerText:text, const format[], ...)`
 * `SetGameModeText(const format[], ...)`
 * `SendRconCommand(const format[], ...)`
-
----
 
 ## Ejemplo Completo para SA-MP / open.mp
 
@@ -385,8 +369,6 @@ CMD:sancionar(playerid, params[])
     return 1;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

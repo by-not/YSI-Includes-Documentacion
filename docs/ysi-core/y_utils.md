@@ -22,8 +22,6 @@ Para utilizar todas las macros y funciones utilitarias en tu gamemode o filtersc
 #include <YSI_Core\y_utils>
 ```
 
----
-
 ## Tabla de Contenido
 
 1. [Macros Matemáticas y de Rango](#macros-matematicas-y-de-rango)

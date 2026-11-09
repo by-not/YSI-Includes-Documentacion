@@ -6,8 +6,6 @@ Tradicionalmente en SA-MP, gestionar respuestas a eventos asíncronos (como la r
 
 Con `y_inline`, puedes escribir la función de respuesta directamente dentro del bloque donde se origina la acción, capturando y utilizando todas las variables locales del ámbito superior de forma automática y segura.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar funciones inline en tu script o gamemode:
@@ -16,8 +14,6 @@ Para utilizar funciones inline en tu script o gamemode:
 #include <open.mp> // o <a_samp>
 #include <YSI_Coding\y_inline>
 ```
-
----
 
 ## Resumen de Funciones y Macros
 
@@ -30,8 +26,6 @@ Para utilizar funciones inline en tu script o gamemode:
 | [`@.callback(args)`](#sintaxis-de-invocacion) | Sintaxis de llamada | Invoca la función almacenada en un parámetro de tipo `Func:`. |
 | [`Callback_Restore`](#callback_restore) | Función stock | Sincroniza las variables capturadas modificadas de vuelta a la pila (*stack*) de la función padre. |
 | [`Callback_Release`](#callback_release) | Función stock | Libera los recursos de memoria asignados a una clausura persistente en el heap de YSI. |
-
----
 
 ## Sintaxis Fundamental
 
@@ -136,8 +130,6 @@ inline const NombreInline(parametros)
   - Elimina el código de compilación y las instrucciones de copia de memoria que sincronizan las variables de la clausura.
   - Ideal para funciones de búsqueda, iteración o filtros donde los valores externos se consultan pero no se alteran.
 
----
-
 ## Cómo Funcionan las Clausuras (Closures)
 
 Una **clausura** es la combinación de una función y el entorno léxico en el cual fue declarada. En Pawn, las variables locales residen temporalmente en la pila (*stack*) de la máquina virtual AMX. Cuando una función termina, su marco de pila se destruye.
@@ -183,8 +175,6 @@ Ocurre cuando la función receptora llama al inline **después** de que la funci
 - YSI copia automáticamente todas las variables locales capturadas a un bloque de memoria seguro administrado por su propio heap (`y_malloc`).
 - Cuando el callback se activa, la función inline utiliza estas variables copiadas como si la función contenedora aún existiera.
 
----
-
 ## Creación de Funciones Receptoras con `Func:`
 
 Si deseas escribir tus propias librerías o funciones que acepten callbacks e inlines con seguridad de tipos en tiempo de compilación, utiliza la etiqueta `Func:nombre<especificadores>`:
@@ -219,8 +209,6 @@ VerificarUsuario(playerid)
 }
 ```
 
----
-
 ## Gestión de Memoria y Ciclo de Vida
 
 Para evitar fugas de memoria (*memory leaks*) en operaciones asíncronas avanzadas:
@@ -248,8 +236,6 @@ stock Callback_Restore(Func:callback<>)
 stock Callback_Release(Func:callback<>)
 ```
 - **Uso:** Normalmente, librerías como `y_dialog` o `y_inline_timers` liberan la clausura automáticamente tras ejecutarse. Si diseñas tu propio sistema asíncrono que retiene una función durante múltiples ciclos, debes llamar a `Callback_Release` cuando la función ya no se vaya a utilizar más.
-
----
 
 ## Ejemplo Completo para SA-MP / open.mp
 
@@ -332,8 +318,6 @@ CMD:transferir(playerid, params[])
     return 1;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

@@ -10,8 +10,6 @@ En el desarrollo de SA-MP y open.mp, los temporizadores tradicionales presentan 
 
 `y_timers` soluciona todos estos inconvenientes mediante algoritmos de compensación temporal (*scheduling & offsetting*), soporte nativo de tipos para arrays y cadenas, comprobación estricta de sintaxis y palabras clave expresivas como `timer`, `task`, `ptask`, `defer` y `repeat`.
 
----
-
 ## Cómo incluir el módulo
 
 Para utilizar `y_timers`, incluye la librería después de las dependencias base (`a_samp` u `open.mp`):
@@ -20,8 +18,6 @@ Para utilizar `y_timers`, incluye la librería después de las dependencias base
 #include <open.mp> // o <a_samp>
 #include <YSI_Coding\y_timers>
 ```
-
----
 
 ## Resumen de Funciones y Macros
 
@@ -35,8 +31,6 @@ Para utilizar `y_timers`, incluye la librería después de las dependencias base
 | [`stop`](#stop) | Macro / Palabra clave | Detiene inmediatamente la ejecución de un temporizador activo asignado a un identificador. |
 | [`Timer_IsRunning`](#timer_isrunning) | Función stock | Comprueba si un temporizador específico (`Timer:`) sigue activo y en ejecución. |
 | [`Timer_GetCallCount`](#timer_getcallcount) | Función stock | Obtiene el número de veces que se ha ejecutado un temporizador repetitivo activo. |
-
----
 
 ## Definición y Ejecución de Temporizadores
 
@@ -388,8 +382,6 @@ timer MetricPulse[1000]()
 }
 ```
 
----
-
 ## Paso de Argumentos Especiales: Arrays y Cadenas
 
 En el SA-MP original, enviar arrays o texto a `SetTimerEx` requería trucos de memoria o plugins de terceros debido al famoso error de desreferenciación. En `y_timers`, el manejo de memoria dinámica está integrado transparentemente:
@@ -446,8 +438,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
     return 0;
 }
 ```
-
----
 
 ## Ejemplo Completo para SA-MP / open.mp
 
@@ -578,8 +568,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
     return 0;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

@@ -25,8 +25,6 @@ En el scripting convencional de SA-MP, tareas cotidianas como obtener el nombre 
 #include <YSI_Game\y_weapondata>
 ```
 
----
-
 ## Tabla de Contenido
 
 1. [y_vehicledata: Datos de Vehículos](#y_vehicledata-datos-de-vehiculos)

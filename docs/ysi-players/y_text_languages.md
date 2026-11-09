@@ -29,8 +29,6 @@ Para utilizar el sistema de textos e idiomas:
 > [!NOTE]
 > Al incluir `y_text`, se incluye internamente `y_languages`, pero es una buena práctica declarar ambos explícitamente si vas a gestionar idiomas de forma intensiva.
 
----
-
 ## Tabla de Contenido
 
 - [Arquitectura de Archivos de Texto](#arquitectura-de-archivos-de-texto)

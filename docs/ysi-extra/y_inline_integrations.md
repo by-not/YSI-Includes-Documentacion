@@ -20,8 +20,6 @@ Las extensiones `y_inline_*` resuelven este problema mediante:
 - **Captura automática de variables locales:** Puedes acceder a variables del ámbito padre dentro de la función inline sin declararlas como parámetros de transporte.
 - **Gestión automática de memoria y ciclo de vida:** Las referencias indirectas (`Indirect_Claim` / `Indirect_Release`) aseguran que las clausuras se liberen al terminar o si el objeto asociado se destruye.
 
----
-
 ## Tabla de Contenido
 
 1. [y_inline_mysql: Integración con MySQL (maddinat0r / pBlueG)](#y_inline_mysql-integracion-con-mysql)

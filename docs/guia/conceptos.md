@@ -2,8 +2,6 @@
 
 Para dominar la suite **YSI v5**, es indispensable comprender su filosofía de diseño, sus patrones idiomáticos, el sistema de decoradores modernos, sus convenciones de tipado y cómo evitar los errores más habituales al desarrollar en SA-MP y open.mp.
 
----
-
 ## Tabla de Contenido
 
 - [Filosofía y Paradigma de YSI](#filosofia-y-paradigma-de-ysi)

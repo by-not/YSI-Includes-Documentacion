@@ -5,8 +5,6 @@ Este documento reúne tres de los módulos de soporte y metaprogramación más p
 * **`y_stringhash`:** Cálculo de hashes criptográficos y no criptográficos en **tiempo de compilación**, permitiendo utilizar cadenas de texto directamente dentro de sentencias `switch-case`.
 * **`y_unique`:** Generador de identificadores y símbolos únicos a nivel de preprocesador para evitar colisiones de nombres entre múltiples includes y macros.
 
----
-
 ## Cómo incluir los módulos
 
 Puedes incluirlos individualmente según tus necesidades:
@@ -17,8 +15,6 @@ Puedes incluirlos individualmente según tus necesidades:
 #include <YSI_Coding\y_stringhash>
 #include <YSI_Coding\y_unique>
 ```
-
----
 
 ## Parte 1: y_remote (Invocación Remota Tipada entre Scripts)
 
@@ -125,8 +121,6 @@ CMD:kick(playerid, params[])
     return 1;
 }
 ```
-
----
 
 ## Parte 2: y_stringhash (Hashes en Tiempo de Compilación)
 
@@ -243,8 +237,6 @@ CMD:comprar(playerid, params[])
 }
 ```
 
----
-
 ## Parte 3: y_unique (Generación de Símbolos Únicos)
 
 En el preprocesador de C, existe la macro `__COUNTER__`, que incrementa un número entero cada vez que se expande, permitiendo generar identificadores de variables y funciones únicos. El compilador oficial de Pawn carece por completo de dicha directiva.
@@ -275,8 +267,6 @@ Cada vez que un archivo o macro incluye `<YSI_Coding\y_unique>`, el archivo:
 `y_unique` es el motor silencioso que hace posible la magia de **`y_hooks`**:
 - Cuando utilizas `hook OnPlayerConnect(playerid)` en 15 archivos `.pwn` distintos, `y_hooks` se apoya en `y_unique` para nombrar internamente cada callback como `_yH_OnPlayerConnect@00`, `_yH_OnPlayerConnect@01`, etc.
 - Gracias a esto, el compilador jamás emite el error `symbol already defined`, garantizando que múltiples librerías e includes coexistan pacíficamente sin importar cuántas veces intercepten los mismos eventos.
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

@@ -37,8 +37,6 @@ Para utilizar `y_users`, es **estrictamente obligatorio** definir la constante `
 > [!IMPORTANT]
 > Si no defines `MODE_NAME` antes de incluir `y_users`, el compilador emitirá un error fatal: `Please define "MODE_NAME" before including y_users.`
 
----
-
 ## Tabla de Contenido
 
 - [Ciclo de Vida de una Cuenta](#ciclo-de-vida-de-una-cuenta)

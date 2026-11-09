@@ -32,8 +32,6 @@ Tanto `y_svar` como `y_uvar` requieren definir obligatoriamente la constante `MO
 > [!IMPORTANT]
 > `y_uvar` depende internamente de `y_users` y del sistema de autenticación de cuentas. Asegúrate de configurar también el método de hashing de contraseñas (`#define PP_WHIRLPOOL` o `#define PP_MD5`).
 
----
-
 ## Tabla de Contenido
 
 - [Módulo y_svar: Variables de Servidor Persistentes](#modulo-y_svar-variables-de-servidor-persistentes)

@@ -6,8 +6,6 @@ La combinación de **`y_malloc`** y **`y_ctrl`** proporciona a los desarrollador
 1. **`y_malloc`:** Asignación y liberación dinámica de memoria en el heap del AMX (`malloc`, `free`, `realloc`, `calloc`), permitiendo dimensionar buffers en tiempo de ejecución.
 2. **`y_ctrl`:** Control de ejecución y manejo de bajo nivel de la máquina virtual AMX, permitiendo crear registros personalizados interceptables vía `#emit LCTRL` y `#emit SCTRL`.
 
----
-
 ## Cómo incluir los módulos
 
 Puedes incluirlos juntos o por separado según las necesidades de tu arquitectura:
@@ -17,8 +15,6 @@ Puedes incluirlos juntos o por separado según las necesidades de tu arquitectur
 #include <YSI_Coding\y_malloc>
 #include <YSI_Coding\y_ctrl>
 ```
-
----
 
 ## Parte 1: y_malloc (Asignación Dinámica de Memoria)
 
@@ -171,8 +167,6 @@ mgeta(resultado, sizeof(resultado), arrayBuffer, 10);
 free(arrayBuffer);
 ```
 
----
-
 ## Parte 2: y_ctrl (Control de Flujo de Bajo Nivel en AMX)
 
 En la máquina virtual AMX de Pawn, la instrucción ensambladora `LCTRL` (*Load Control Register*) lee registros internos del procesador virtual (tales como `DAT`, `COD`, `STK`, `HEA`, `FRM`), mientras que `SCTRL` (*Store Control Register*) escribe sobre ellos.
@@ -246,8 +240,6 @@ main()
 }
 ```
 
----
-
 ## Ejemplo Completo Integrado: Buffer Dinámico Seguro
 
 Un caso realista que demuestra la creación de un búfer de tamaño adaptable para leer registros de log con validación de punteros y liberación garantizada:
@@ -294,8 +286,6 @@ public OnGameModeInit()
     return 1;
 }
 ```
-
----
 
 ## Buenas Prácticas y Errores Comunes
 

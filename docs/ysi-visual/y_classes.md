@@ -7,15 +7,11 @@ El sistema nativo de selección de clases de SA-MP (`AddPlayerClass`) adolece de
 
 **`y_classes`** rediseña por completo la selección de personaje implementando un ingenioso mecanismo de hot-swapping visual (mediante 3 clases ficticias de rotación infinita) que permite añadir **cientos de clases dinámicas**, asignarles **armas ilimitadas de spawn**, asociarlas a **grupos de permisos** (`y_groups`) y borrarlas o modificarlas en tiempo real.
 
----
-
 ## Módulo Requerido
 
 ```pawn
 #include <YSI_Visual\y_classes>
 ```
-
----
 
 ## Tabla de Contenido
 
